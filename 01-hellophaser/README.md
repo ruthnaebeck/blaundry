@@ -15,6 +15,7 @@ No example files have been downloaded, see:
 https://phaser.io/tutorials/getting-started/part7
 
 Server setup with expressjs:  http://expressjs.com/
+
 I use Visual Studio Code as my text editor:  https://code.visualstudio.com/
 
 *NOTE: If you are a newbie, you must install Node.js to use npm:  https://nodejs.org/
