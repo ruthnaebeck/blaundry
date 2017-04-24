@@ -127,6 +127,7 @@ function update() {
         scoreText.text = 'Score: ' + score
         game.add.text(350, 200, 'Game Over', { fontSize: '32px', fill: '#000' })
         player.destroy()
+        game.lockRender = true
         game.gamePaused()
     }
 }
