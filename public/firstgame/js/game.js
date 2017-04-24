@@ -128,7 +128,8 @@ function update() {
         game.add.text(350, 200, 'Game Over', { fontSize: '32px', fill: '#000' })
         player.destroy()
         game.lockRender = true
-        game.gamePaused()
+        // Enables debugging step method
+        game.enableStep()
     }
 }
 
