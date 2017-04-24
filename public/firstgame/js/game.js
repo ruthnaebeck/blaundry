@@ -10,8 +10,9 @@ function preload() {
     game.load.spritesheet('dude', 'assets/dude.png', 32, 48)
 }
 
-var platforms, player, cursors, spacebar, stars, diamonds, counter, scoreText
+var platforms, player, cursors, spacebar, stars, diamonds, counter, scoreText, timer, timerText
 var score = 0
+var total = 0
 
 function create() {
 
@@ -75,9 +76,15 @@ function create() {
     }
     // Score
     scoreText = game.add.text(16, 16, 'Score: 0', { fontSize: '32px', fill: '#000' })
+    // Timer
+    timerText = game.add.text(600, 16, 'Timer: 0', { fontSize: '32px', fill: '#000' })
+    timer = game.time.create(false)
+    timer.loop(1000, updateTimer, this)
+    timer.start()
 }
 
 function update() {
+    console.log('Still updating')
     //  Collide the player and the stars with the platforms
     var hitPlatform = game.physics.arcade.collide(player, platforms)
 
@@ -114,14 +121,19 @@ function update() {
 
     // End of Game
     if(!counter){
-      player.kill()
-      game.add.text(350, 200, 'Game Over', { fontSize: '32px', fill: '#000' })
+        counter++
+        timer.stop()
+        score += 100 - total
+        scoreText.text = 'Score: ' + score
+        game.add.text(350, 200, 'Game Over', { fontSize: '32px', fill: '#000' })
+        player.destroy()
+        game.gamePaused()
     }
 }
 
 function collectStar (plyr, star) {
     // Removes the star from the screen
-    star.kill()
+    star.destroy()
     counter--
     //  Add and update the score
     score += 10
@@ -129,8 +141,13 @@ function collectStar (plyr, star) {
 }
 
 function collectDiamond (plyr, diamnd) {
-    diamnd.kill()
+    diamnd.destroy()
     counter--
     score += 50
     scoreText.text = 'Score: ' + score
+}
+
+function updateTimer(){
+    total++
+    timerText.text = 'Timer: ' + total
 }
