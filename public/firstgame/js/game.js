@@ -7,7 +7,7 @@ function preload() {
     game.load.image('ground', 'assets/platform.png')
     game.load.image('star', 'assets/star.png')
     game.load.image('diamond', 'assets/diamond.png')
-    game.load.spritesheet('dude', 'assets/dude.png', 32, 48)
+    game.load.spritesheet('bear', 'assets/bear.png', 50, 59) // W x H of image on spritesheet
 }
 
 var platforms, player, cursors, spacebar, stars, diamonds, counter, scoreText, timer, timerText
@@ -37,14 +37,16 @@ function create() {
     ledge.body.immovable = true
 
     // The player and its settings
-    player = game.add.sprite(32, game.world.height - 150, 'dude')
+    // Add the bear sprite at position 32 x 450 (600-150)
+    player = game.add.sprite(32, game.world.height - 150, 'bear')
     //  We need to enable physics on the player
     game.physics.arcade.enable(player)
     //  Player physics properties. Give the little guy a slight bounce.
     player.body.bounce.y = 0.2
     player.body.gravity.y = 350
     player.body.collideWorldBounds = true
-    //  Our two animations, walking left and right.
+    // Two animations, walking left and right.
+    // name of animation = left, pics on strip = arr, FPS = 10, Loop = true
     player.animations.add('left', [0, 1, 2, 3], 10, true)
     player.animations.add('right', [5, 6, 7, 8], 10, true)
 
