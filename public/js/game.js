@@ -4,11 +4,11 @@ var BearClothes = BearClothes || {}
 BearClothes.Game = function () {}
 BearClothes.Game.prototype = {
   create: function () {
-    // this.game.world.setBounds(0, 0, 1920, 1920)
-    this.background = this.game.add.sprite(0, 0, 'sky')
+    var height = this.game.world.height
+    this.background = this.game.add.sprite(0, 0, 'wall')
     this.platforms = this.game.add.group()
     this.platforms.enableBody = true
-    var ground = this.platforms.create(0, this.game.world.height - 64, 'ground')
+    var ground = this.platforms.create(0, height - 64, 'ground')
     ground.scale.setTo(2, 2)
     ground.body.immovable = true
     var ledge = this.platforms.create(400, 400, 'ground')
@@ -16,7 +16,7 @@ BearClothes.Game.prototype = {
     ledge = this.platforms.create(-150, 250, 'ground')
     ledge.body.immovable = true
     // Player - Bear
-    this.player = this.game.add.sprite(32, this.game.world.height - 150, 'bear')
+    this.player = this.game.add.sprite(32, height - 150, 'bear')
     this.game.physics.arcade.enable(this.player)
     this.player.body.bounce.y = 0.2
     this.player.body.gravity.y = 350
@@ -32,10 +32,12 @@ BearClothes.Game.prototype = {
     this.numClothes = 0
     this.addClothes()
     // Score
-    this.scoreText = this.game.add.text(16, 16, 'Score: 0', { fontSize: '32px', fill: '#000' })
+    this.scoreText = this.game.add.text(
+      16, height - 50, 'Score: 0', { fontSize: '32px', fill: '#fff' })
     this.score = 0
     // Timer
-    this.timerText = this.game.add.text(600, 16, 'Timer: 0:30', { fontSize: '32px', fill: '#000' })
+    this.timerText = this.game.add.text(
+      600, height - 50, 'Timer: 0:30', { fontSize: '32px', fill: '#fff' })
     this.time = 30
     this.timer = this.game.time.create(false)
     this.timer.loop(1000, this.updateTimer, this)

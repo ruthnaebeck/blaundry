@@ -9,19 +9,24 @@ BearClothes.Menu.prototype = {
     this.highestScore = Math.max(score, this.highestScore)
   },
   create: function () {
-    this.background = this.game.add.sprite(0, 0, 'bearcub')
+    this.background = this.game.add.sprite(
+      this.game.world.centerX, this.game.world.centerY, 'bearcub')
+    this.background.anchor.set(0.5)
     //start game text
-    var text = 'Help the Bear Gather as Many Clothes as Possible!'
+    var text = 'Help the Bear Gather as'
     var style = { font: '25px Arial', fill: '#fff', align: 'center' }
-    var bText = this.game.add.text(this.game.width / 2, this.game.height / 2, text, style)
+    var aText = this.game.add.text(this.game.width / 2, this.game.height / 2, text, style)
+    aText.anchor.set(0.5)
+    text = 'Many Clothes as Possible!'
+    var bText = this.game.add.text(this.game.width / 2, this.game.height / 2 + 30, text, style)
     bText.anchor.set(0.5)
     text = 'Click to Start'
     style = { font: '15px Arial', fill: '#fff', align: 'center' }
-    var cText = this.game.add.text(this.game.width / 2, this.game.height / 2 + 30, text, style)
+    var cText = this.game.add.text(this.game.width / 2, this.game.height / 2 + 70, text, style)
     cText.anchor.set(0.5)
     text = 'Highest score: ' + this.highestScore
     style = { font: '20px Arial', fill: '#fff', align: 'center' }
-    var hText = this.game.add.text(this.game.width / 2, this.game.height / 2 + 75, text, style)
+    var hText = this.game.add.text(this.game.width / 2, this.game.height / 2 + 110, text, style)
     hText.anchor.set(0.5)
   },
   update: function () {
