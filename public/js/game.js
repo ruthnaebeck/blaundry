@@ -4,6 +4,7 @@ var BearClothes = BearClothes || {}
 BearClothes.Game = function () {}
 BearClothes.Game.prototype = {
   create: function () {
+    // Game World
     var height = this.game.world.height
     this.background = this.game.add.sprite(0, 0, 'wall')
     this.platforms = this.game.add.group()
@@ -93,6 +94,6 @@ BearClothes.Game.prototype = {
     this.timer.stop()
     this.game.add.text(350, 200, 'Game Over', { fontSize: '32px', fill: '#000' })
     this.player.kill()
-    this.game.state.start('Menu', true, false, this.score)
+    this.game.state.start('End', true, false, this.score)
   }
 }

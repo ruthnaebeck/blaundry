@@ -9,10 +9,9 @@ BearClothes.Menu.prototype = {
     this.highestScore = Math.max(score, this.highestScore)
   },
   create: function () {
-    this.background = this.game.add.sprite(
+    this.bearcub = this.game.add.sprite(
       this.game.world.centerX, this.game.world.centerY, 'bearcub')
-    this.background.anchor.set(0.5)
-    //start game text
+    this.bearcub.anchor.set(0.5)
     var text = 'Help the Bear Gather as'
     var style = { font: '25px Arial', fill: '#fff', align: 'center' }
     var aText = this.game.add.text(this.game.width / 2, this.game.height / 2, text, style)
