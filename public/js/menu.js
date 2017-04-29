@@ -4,12 +4,10 @@ var BearClothes = BearClothes || {}
 BearClothes.Menu = function () { }
 BearClothes.Menu.prototype = {
   create: function () {
+    this.game.input.onTap.add(this.listener, this)
     this.bearcub = this.game.add.sprite(
       this.game.world.centerX, this.game.world.centerY, 'bearcub')
     this.bearcub.anchor.set(0.5)
-    this.bearcub.inputEnabled = true
-    this.bearcub.events.onInputDown.add(this.listener, this)
-    this.bearcub.events.onInputOver.add(this.listener, this)
     var text = 'BLaundry'
     var style = { font: '40px Arial', fill: '#fff', align: 'left' }
     var title = this.game.add.text(
@@ -31,7 +29,7 @@ BearClothes.Menu.prototype = {
     cText.anchor.set(0.5)
   },
   listener(){
-    console.log('game update 2')
+    console.log('game update 3')
     this.game.state.start('Game')
   }
 }
