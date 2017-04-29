@@ -26,14 +26,14 @@ BearClothes.End.prototype = {
     this.scoreText = this.game.add.text(
       16, height - 50, `Score: ${this.score}`, { fontSize: '32px', fill: '#fff' })
     var text = 'Game Over'
-    var style = { font: '25px Arial', fill: '#000', align: 'center' }
+    var style = { font: '35px Arial', fill: '#000', align: 'center' }
     var aText = this.game.add.text(this.game.width / 2, this.game.height / 2 - 50, text, style)
     aText.anchor.set(0.5)
     text = 'Click to Replay'
     style = { font: '15px Arial', fill: '#000', align: 'center' }
     var cText = this.game.add.text(this.game.width / 2, this.game.height / 2 - 20, text, style)
     cText.anchor.set(0.5)
-    text = 'Highest score: ' + this.highestScore
+    text = 'Your Highest Score: ' + this.highestScore
     style = { font: '20px Arial', fill: '#000', align: 'center' }
     var hText = this.game.add.text(this.game.width / 2, this.game.height / 2 + 10, text, style)
     hText.anchor.set(0.5)
