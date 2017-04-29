@@ -29,7 +29,6 @@ BearClothes.Menu.prototype = {
     cText.anchor.set(0.5)
   },
   listener(){
-    console.log('game update 3')
     this.game.state.start('Game')
   }
 }
