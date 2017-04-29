@@ -9,6 +9,7 @@ BearClothes.Menu.prototype = {
     this.bearcub.anchor.set(0.5)
     this.bearcub.inputEnabled = true
     this.bearcub.events.onInputDown.add(this.listener, this)
+    this.bearcub.events.onInputOver.add(this.listener, this)
     var text = 'BLaundry'
     var style = { font: '40px Arial', fill: '#fff', align: 'left' }
     var title = this.game.add.text(
@@ -30,7 +31,7 @@ BearClothes.Menu.prototype = {
     cText.anchor.set(0.5)
   },
   listener(){
-    console.log('game update 1')
+    console.log('game update 2')
     this.game.state.start('Game')
   }
 }
