@@ -3,9 +3,9 @@ This is a simple game about a bear who likes clean laundry.  Help the bear gathe
 RESOURCES
 
 phaser js
-http://phaser.io/
-https://github.com/photonstorm/phaser
-https://github.com/photonstorm/phaser-examples
+#http://phaser.io/
+#https://github.com/photonstorm/phaser
+#https://github.com/photonstorm/phaser-examples
 
 Game Graphics
 https://openclipart.org/
