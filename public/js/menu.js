@@ -3,11 +3,6 @@
 var BearClothes = BearClothes || {}
 BearClothes.Menu = function () { }
 BearClothes.Menu.prototype = {
-  init: function(score){
-    score = score || 0
-    this.highestScore = this.highestScore || 0
-    this.highestScore = Math.max(score, this.highestScore)
-  },
   create: function () {
     this.bearcub = this.game.add.sprite(
       this.game.world.centerX, this.game.world.centerY, 'bearcub')
@@ -23,10 +18,6 @@ BearClothes.Menu.prototype = {
     style = { font: '15px Arial', fill: '#fff', align: 'center' }
     var cText = this.game.add.text(this.game.width / 2, this.game.height / 2 + 70, text, style)
     cText.anchor.set(0.5)
-    text = 'Highest score: ' + this.highestScore
-    style = { font: '20px Arial', fill: '#fff', align: 'center' }
-    var hText = this.game.add.text(this.game.width / 2, this.game.height / 2 + 110, text, style)
-    hText.anchor.set(0.5)
   },
   update: function () {
     if (this.game.input.activePointer.justPressed()) {

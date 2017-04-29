@@ -5,8 +5,9 @@ BearClothes.End = function () { }
 BearClothes.End.prototype = {
   init: function(score){
     this.score = score || 0
-    this.highestScore = this.highestScore || 0
+    this.highestScore = window.localStorage.highestScore || 0
     this.highestScore = Math.max(score, this.highestScore)
+    window.localStorage.highestScore = this.highestScore
   },
   create: function () {
     // Game World
