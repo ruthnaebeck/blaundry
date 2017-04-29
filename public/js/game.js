@@ -16,6 +16,7 @@ BearClothes.Game.prototype = {
     ledge.body.immovable = true
     ledge = this.platforms.create(-150, 250, 'ground')
     ledge.body.immovable = true
+    this.popSound = this.game.add.audio('pop')
     // Player - Bear
     this.player = this.game.add.sprite(32, height - 150, 'bear')
     this.game.physics.arcade.enable(this.player)
@@ -80,6 +81,7 @@ BearClothes.Game.prototype = {
     }
   },
   getClothes: function (plyr, pc) {
+    this.popSound.play()
     pc.destroy()
     this.numClothes--
     this.score += 10
