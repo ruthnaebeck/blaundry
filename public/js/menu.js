@@ -31,5 +31,8 @@ BearClothes.Menu.prototype = {
     if (this.game.input.activePointer.justPressed()) {
       this.game.state.start('Game')
     }
+    if (this.game.input.pointer1.isDown){
+      this.game.state.start('Game')
+    }
   }
 }
