@@ -29,12 +29,8 @@ BearClothes.Menu.prototype = {
       this.game.width / 2, this.game.height / 2 + 115, text, style)
     cText.anchor.set(0.5)
   },
-  update: function () {
-    // if (this.game.input.activePointer.justPressed()) {
-    //   this.game.state.start('Game')
-    // }
-  },
   listener(){
+    console.log('game update 1')
     this.game.state.start('Game')
   }
 }
