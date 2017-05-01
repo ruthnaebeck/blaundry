@@ -10,6 +10,8 @@ BearClothes.End.prototype = {
     window.localStorage.highestScore = this.highestScore
   },
   create: function () {
+    // Replay
+    this.game.input.onTap.add(this.listener, this)
     // Game World
     var height = this.game.world.height
     this.background = this.game.add.sprite(0, 0, 'wall')
@@ -38,9 +40,7 @@ BearClothes.End.prototype = {
     var hText = this.game.add.text(this.game.width / 2, this.game.height / 2 + 10, text, style)
     hText.anchor.set(0.5)
   },
-  update: function () {
-    if (this.game.input.activePointer.justPressed()) {
-      this.game.state.start('Game')
-    }
+  listener(){
+    this.game.state.start('Game')
   }
 }
