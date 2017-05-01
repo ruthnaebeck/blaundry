@@ -27,10 +27,12 @@ BearClothes.Game.prototype = {
     // this.player.animations.add('right', [5, 6, 7, 8], 10, true)
     // New Bear
     this.bear = this.game.add.sprite(32, height - 135, 'bear', '000')
-    this.bear.animations.add('right', [0, 1, 2, 3], 10, true)
-    this.bear.animations.add('jump-right', [4, 5], 5, false)
-    this.bear.animations.add('left', [6, 7, 8, 9], 10, true)
-    this.bear.animations.add('jump-left', [10], 5, false)
+    // this.bear.animations.add('right', [0, 1, 2, 3], 10, true)
+    // this.bear.animations.add('right', Phaser.Animation.generateFrameNames('', 0, 3, '.png', 3), 10, true)
+    // this.bear.animations.add('jump-right', [4, 5], 5, false)
+    // this.bear.animations.add('left', '006.png', 10, true)
+    // this.bear.animations.add('left', [6, 7, 8, 9], 10, true)
+    // this.bear.animations.add('jump-left', [10], 5, false)
     // Keyboard control
     this.cursors = this.game.input.keyboard.createCursorKeys()
     this.spacebar = this.game.input.keyboard.addKey(32)

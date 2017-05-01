@@ -17,7 +17,7 @@ BearClothes.Preload.prototype = {
     keys.forEach(key => this.load.image(key, `assets/${key}.png`))
     this.load.spritesheet('bear1', 'assets/bear.png', 50, 59)
     this.load.audio('pop', 'assets/audio/pop.ogg')
-    this.game.load.atlasJSONArray('bear', 'assets/atlas/bear.png', 'assets/atlas/bear.json')
+    this.game.load.atlasJSONHash('bear', 'assets/atlas/bear.png', 'assets/atlas/bear.json')
   },
   create: function() {
     this.state.start('Menu')
