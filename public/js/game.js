@@ -1,4 +1,4 @@
-// /* global game */
+// /* global game Phaser */
 
 var BearClothes = BearClothes || {}
 BearClothes.Game = function () {}
@@ -18,13 +18,19 @@ BearClothes.Game.prototype = {
     ledge.body.immovable = true
     this.popSound = this.game.add.audio('pop')
     // Player - Bear
-    this.player = this.game.add.sprite(32, height - 150, 'bear')
-    this.game.physics.arcade.enable(this.player)
-    this.player.body.bounce.y = 0.2
-    this.player.body.gravity.y = 350
-    this.player.body.collideWorldBounds = true
-    this.player.animations.add('left', [0, 1, 2, 3], 10, true)
-    this.player.animations.add('right', [5, 6, 7, 8], 10, true)
+    // this.player = this.game.add.sprite(32, height - 150, 'bear')
+    // this.game.physics.arcade.enable(this.player)
+    // this.player.body.bounce.y = 0.2
+    // this.player.body.gravity.y = 350
+    // this.player.body.collideWorldBounds = true
+    // this.player.animations.add('left', [0, 1, 2, 3], 10, true)
+    // this.player.animations.add('right', [5, 6, 7, 8], 10, true)
+    // New Bear
+    this.bear = this.game.add.sprite(32, height - 135, 'bear', '000')
+    this.bear.animations.add('right', [0, 1, 2, 3], 10, true)
+    this.bear.animations.add('jump-right', [4, 5], 5, false)
+    this.bear.animations.add('left', [6, 7, 8, 9], 10, true)
+    this.bear.animations.add('jump-left', [10], 5, false)
     // Keyboard control
     this.cursors = this.game.input.keyboard.createCursorKeys()
     this.spacebar = this.game.input.keyboard.addKey(32)
@@ -48,25 +54,25 @@ BearClothes.Game.prototype = {
   update: function () {
     console.log('Still updating')
     // Player - Bear
-    var hitPlatform = this.game.physics.arcade.collide(this.player, this.platforms)
-    this.player.body.velocity.x = 0
+    var hitPlatform = this.game.physics.arcade.collide(this.bear, this.platforms)
+    this.bear.body.velocity.x = 0
     if (this.cursors.left.isDown) {
-      this.player.body.velocity.x = -150
-      this.player.animations.play('left')
+      this.bear.body.velocity.x = -150
+      this.bear.animations.play('left')
     } else if (this.cursors.right.isDown) {
-      this.player.body.velocity.x = 150
-      this.player.animations.play('right')
+      this.bear.body.velocity.x = 150
+      this.bear.animations.play('right')
     } else {
-      this.player.animations.stop()
+      this.bear.animations.stop()
     }
     if ((this.cursors.up.isDown || this.spacebar.isDown)
-      && this.player.body.touching.down && hitPlatform) {
-      this.player.body.velocity.y = -350
-      this.player.frame = 4
+      && this.bear.body.touching.down && hitPlatform) {
+      this.bear.body.velocity.y = -350
+      this.bear.frame = 4
     }
     // Clothes
     this.game.physics.arcade.collide(this.clothes, this.platforms)
-    this.game.physics.arcade.overlap(this.player, this.clothes, this.getClothes, null, this)
+    // this.game.physics.arcade.overlap(this.bear, this.clothes, this.getClothes, null, this)
     if (this.numClothes < 100) this.addClothes()
     // End of Game
     if (!this.time) this.gameOver()
@@ -95,7 +101,7 @@ BearClothes.Game.prototype = {
   gameOver: function() {
     this.timer.stop()
     this.game.add.text(350, 200, 'Game Over', { fontSize: '32px', fill: '#000' })
-    this.player.kill()
+    this.bear.kill()
     this.game.state.start('End', true, false, this.score)
   }
 }
