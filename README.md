@@ -27,16 +27,16 @@ BLaundry was built using Express and Phaser.js. Each player's highest score is s
 I used the following resources while making BLaundry.
 
 phaser js<br />
-http://phaser.io/ 
-https://github.com/photonstorm/phaser 
-https://github.com/photonstorm/phaser-examples 
+http://phaser.io/<br />
+https://github.com/photonstorm/phaser<br />
+https://github.com/photonstorm/phaser-examples<br />
 
-Game Graphics 
-https://openclipart.org/ 
-https://opengameart.org/ 
+Game Graphics<br />
+https://openclipart.org/<br />
+https://opengameart.org/<br />
 
-Other 
-https://v-play.net/game-resources/16-sites-featuring-free-game-graphics 
-https://draeton.github.io/stitches/ 
-https://gamedevacademy.org/html5-phaser-tutorial-spacehipster-a-space-exploration-game/ 
-https://www.w3schools.com/html/html5_webstorage.asp 
+Other<br />
+https://v-play.net/game-resources/16-sites-featuring-free-game-graphics<br />
+https://draeton.github.io/stitches/<br />
+https://gamedevacademy.org/html5-phaser-tutorial-spacehipster-a-space-exploration-game/<br />
+https://www.w3schools.com/html/html5_webstorage.asp<br />
