@@ -26,7 +26,7 @@ BLaundry was built using Express and Phaser.js. Each player's highest score is s
 
 I used the following resources while making BLaundry.
 
-phaser js 
+phaser js<br />
 http://phaser.io/ 
 https://github.com/photonstorm/phaser 
 https://github.com/photonstorm/phaser-examples 
