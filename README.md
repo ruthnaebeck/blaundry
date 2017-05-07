@@ -24,14 +24,14 @@ BLaundry was built using Express and Phaser.js. Each player's highest score is s
 
 # For Developers
 
-Local Development
+<b>Local Development</b>
 <ul>
-<li>Fork the Repo</li>
-<li>Git Clone</li>
-<li>npm install</li>
+  <li>Fork the Repo</li>
+  <li>Git Clone</li>
+  <li>npm install</li>
 </ul>
 
-Heroku Deployment
+<b>Heroku Deployment</b>
 <ul>
   <li>You must have the following:
     <ul>
