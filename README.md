@@ -1,6 +1,16 @@
-This is a simple game about a bear who likes clean laundry.  Help the bear gather as many clothes as possible before time runs out.
+# BLaundry
 
-RESOURCES
+This is a silly game about a bear who likes clean laundry.  Help the bear gather as many clothes as possible before time runs out.
+
+Play the game at https://blaundry.herokuapp.com/.  The bear can be controlled using the left and right arrow keys for movement and the up arrow key or spacebar for jumping.
+
+# Demo
+
+X
+
+# Resources
+
+I used the following resources while making BLaundry.
 
 phaser js  
 http://phaser.io/  
