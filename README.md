@@ -25,19 +25,27 @@ BLaundry was built using Express and Phaser.js. Each player's highest score is s
 # For Developers
 
 Local Development
--Fork the Repo
--Git Clone
--npm install
+<ul>
+<li>Fork the Repo</li>
+<li>Git Clone</li>
+<li>npm install</li>
+</ul>
 
 Heroku Deployment
--You must have the following:
---Heroku account
---Node / npm installed locally
---Heroku Command Line Interface installed locally
--In the command line:
---heroku login
---heroku create appNameHere
---git push heroku master
+
+You must have the following:
+<ul>
+<li>Heroku account</li>
+<li>Node / npm installed locally</li>
+<li>Heroku Command Line Interface installed locally</li>
+</ul>
+
+In the command line:
+<ul>
+<li>heroku login</li>
+<li>heroku create appNameHere</li>
+<li>git push heroku master</li>
+</ul>
 
 # Resources
 
