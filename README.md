@@ -6,7 +6,11 @@ Play the game at https://blaundry.herokuapp.com/.  The bear can be controlled us
 
 # Demo
 
+![BLaundry01](/screenshots/BLaundry01.png?raw=true "Screenshot1")
+
 ![BLaundry02](/screenshots/BLaundry02.png?raw=true "Screenshot2")
+
+![BLaundry03](/screenshots/BLaundry03.png?raw=true "Screenshot3")
 
 # Resources
 
