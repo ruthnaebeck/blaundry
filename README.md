@@ -22,6 +22,23 @@ BLaundry is an online game that anyone can run in their browser. The game is con
 
 BLaundry was built using Express and Phaser.js. Each player's highest score is stored in their browser via local HTML storage. There are 5 game states (Boot, Preload, Menu, Game, and End).
 
+# For Developers
+
+Local Development
+-Fork the Repo
+-Git Clone
+-npm install
+
+Heroku Deployment
+-You must have the following:
+--Heroku account
+--Node / npm installed locally
+--Heroku Command Line Interface installed locally
+-In the command line:
+--heroku login
+--heroku create appNameHere
+--git push heroku master
+
 # Resources
 
 I used the following resources while making BLaundry.
