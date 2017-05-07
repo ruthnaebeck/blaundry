@@ -2,7 +2,7 @@
 
 This is a silly game about a bear who likes clean laundry.  Help the bear gather as many clothes as possible before time runs out.
 
-Play the game at https://blaundry.herokuapp.com/.  The bear can be controlled using the left and right arrow keys for movement and the up arrow key or spacebar for jumping.
+Play the game at https://blaundry.herokuapp.com/.
 
 # Demo
 
@@ -11,6 +11,16 @@ Play the game at https://blaundry.herokuapp.com/.  The bear can be controlled us
 ![BLaundry02](/screenshots/BLaundry02.png?raw=true "Screenshot2")
 
 ![BLaundry03](/screenshots/BLaundry03.png?raw=true "Screenshot3")
+
+# Presentation
+
+https://youtu.be/AYr8TyXMg-Q
+
+# Notes
+
+BLaundry is an online game that anyone can run in their browser. The game is controlled with arrows keys (left, right, up) or the space bar (for jumping).
+
+BLaundry was built using Express and Phaser.js. Each player's highest score is stored in their browser via local HTML storage. There are 5 game states (Boot, Preload, Menu, Game, and End).
 
 # Resources
 
