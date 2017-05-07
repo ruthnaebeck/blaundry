@@ -14,7 +14,7 @@ Play the game at https://blaundry.herokuapp.com/.
 
 # Presentation
 
-https://youtu.be/AYr8TyXMg-Q
+[![Grace Hopper Presentation](http://img.youtube.com/vi/AYr8TyXMg-Q/0.jpg)](http://www.youtube.com/watch?v=AYr8TyXMg-Q)
 
 # Notes
 
