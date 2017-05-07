@@ -32,19 +32,21 @@ Local Development
 </ul>
 
 Heroku Deployment
-
-You must have the following:
 <ul>
-<li>Heroku account</li>
-<li>Node / npm installed locally</li>
-<li>Heroku Command Line Interface installed locally</li>
-</ul>
-
-In the command line:
-<ul>
-<li>heroku login</li>
-<li>heroku create appNameHere</li>
-<li>git push heroku master</li>
+  <li>You must have the following:
+    <ul>
+      <li>Heroku account</li>
+      <li>Node / npm installed locally</li>
+      <li>Heroku Command Line Interface installed locally</li>
+    </ul>
+  </li>
+  <li>In the command line:
+    <ul>
+      <li>heroku login</li>
+      <li>heroku create appNameHere</li>
+      <li>git push heroku master</li>
+    </ul>
+  </li>
 </ul>
 
 # Resources
