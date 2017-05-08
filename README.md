@@ -8,10 +8,6 @@ Play the game at https://blaundry.herokuapp.com/.
 
 ![BLaundry](/screenshots/BLaundry.gif?raw=true "Game State")
 
-![BLaundry01](/screenshots/BLaundry01.png?raw=true "Menu State")
-
-![BLaundry03](/screenshots/BLaundry03.png?raw=true "End State")
-
 # Presentation
 
 [![Grace Hopper Presentation](http://img.youtube.com/vi/AYr8TyXMg-Q/0.jpg)](http://www.youtube.com/watch?v=AYr8TyXMg-Q)
