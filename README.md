@@ -6,9 +6,9 @@ Play the game at https://blaundry.herokuapp.com/.
 
 # Demo
 
-![BLaundry01](/screenshots/BLaundry01.png?raw=true "Menu State")
+![BLaundry](/screenshots/BLaundry.gif?raw=true "Game State")
 
-![BLaundry02](/screenshots/BLaundry02.png?raw=true "Game State")
+![BLaundry01](/screenshots/BLaundry01.png?raw=true "Menu State")
 
 ![BLaundry03](/screenshots/BLaundry03.png?raw=true "End State")
 
