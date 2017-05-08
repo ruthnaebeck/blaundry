@@ -65,3 +65,4 @@ https://v-play.net/game-resources/16-sites-featuring-free-game-graphics<br />
 https://draeton.github.io/stitches/<br />
 https://gamedevacademy.org/html5-phaser-tutorial-spacehipster-a-space-exploration-game/<br />
 https://www.w3schools.com/html/html5_webstorage.asp<br />
+https://www.codeandweb.com/texturepacker/tutorials/creating-spritesheets-for-phaser-with-texturepacker<br />
